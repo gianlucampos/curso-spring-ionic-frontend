@@ -18,7 +18,7 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public menu: MenuController,
-    public authService: AuthService) {
+    public auth: AuthService) {
 
   }
 
@@ -31,9 +31,9 @@ export class HomePage {
   }
 
   login() {
-    this.authService.authenticate(this.creds)
+    this.auth.authenticate(this.creds)
       .subscribe(response => {
-        console.log(response.headers.get('Authorization'));
+        this.auth.successfulLogin(response.headers.get('Authorization'));
         this.navCtrl.setRoot('CategoriasPage');
       });
   }
