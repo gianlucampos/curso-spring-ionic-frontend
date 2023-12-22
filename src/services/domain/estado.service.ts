@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {API_CONFIG} from "../../config/api.config";
-import {EstadoDTO} from "../../models/estado.dto";
+import {EstadoDTO} from "../../models/dto/estado.dto";
 
 @Injectable()
 export class EstadoService {

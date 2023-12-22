@@ -3,8 +3,8 @@ import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angula
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {CidadeService} from "../../services/domain/cidade.service";
 import {EstadoService} from "../../services/domain/estado.service";
-import {EstadoDTO} from "../../models/estado.dto";
-import {CidadeDTO} from "../../models/cidade.dto";
+import {EstadoDTO} from "../../models/dto/estado.dto";
+import {CidadeDTO} from "../../models/dto/cidade.dto";
 import {ClienteService} from "../../services/domain/cliente.service";
 
 @IonicPage()

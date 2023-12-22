@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {CredenciaisDTO} from "../models/credenciais.dto";
+import {CredenciaisDTO} from "../models/dto/credenciais.dto";
 import {API_CONFIG} from "../config/api.config";
 import {LocalUser} from "../models/local_user";
 import {StorageService} from "./storage.service";

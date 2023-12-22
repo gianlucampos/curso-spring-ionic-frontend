@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {StorageService} from "../storage.service";
 import {Cart} from "../../models/cart";
-import {ProdutoDTO} from "../../models/produto.dto";
+import {ProdutoDTO} from "../../models/dto/produto.dto";
 
 @Injectable()
 export class CartService {
