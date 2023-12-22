@@ -26,11 +26,11 @@ export class ProfilePage {
     if (localUser && localUser.email) {
       this.clienteService.findByEmail(localUser.email)
         .subscribe(response => {
-            this.cliente = response;
+            this.cliente = response as ClienteDTO;
             this.getImageIfExists();
           },
           error => {
-            if(error.status == 403) {
+            if (error.status == 403) {
               this.navCtrl.setRoot('HomePage');
             }
           });
@@ -39,7 +39,7 @@ export class ProfilePage {
 
   getImageIfExists() {
     this.clienteService.getImageFromBucket(this.cliente.id)
-      .subscribe(()=> {
+      .subscribe(() => {
         this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}/cp${this.cliente.id}.jpg`;
       }, error => {
       });
