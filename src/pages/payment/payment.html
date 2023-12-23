@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button="" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Forma de pagamento</ion-title>
@@ -25,12 +25,12 @@
     </ion-list>
 
     <ion-item *ngIf="formGroup.value['@type'] == 'pagamentoComCartao'">
-      <ion-label stacked>Parcelas no boleto</ion-label>
+      <ion-label stacked="">Parcelas no boleto</ion-label>
       <ion-select formControlName="numeroDeParcelas">
         <ion-option *ngFor="let n of parcelas; first as f" [value]="n" [selected]="f">{{ n }}
         </ion-option>
       </ion-select>
     </ion-item>
-    <button ion-button block type="submit" [disabled]="formGroup.invalid">Próximo</button>
+    <button ion-button="" block type="submit" [disabled]="formGroup.invalid">Próximo</button>
   </form>
 </ion-content>
